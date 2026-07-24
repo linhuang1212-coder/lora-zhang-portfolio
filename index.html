@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LORA ZHANG — Jewelry Designer</title>
+<meta name="description" content="Lora Zhang — Jewelry designer specializing in haute joaillerie, bespoke collections, and editorial collaborations.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="LORA ZHANG — Jewelry Designer">
+<meta property="og:description" content="Jewelry designer specializing in haute joaillerie, bespoke collections, and editorial collaborations.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Lora Zhang",
+  "jobTitle": "Jewelry Designer",
+  "url": "https://lorazhang.com",
+  "sameAs": [],
+  "creator": {
+    "@type": "SoftwareApplication",
+    "name": "Perplexity Computer",
+    "url": "https://www.perplexity.ai/computer"
+  }
+}
+</script>
+</head>
+<body>
+
+  <!-- ===== HOMEPAGE — THREE PANELS ===== -->
+  <div class="home" id="home">
+
+    <!-- Collections Panel -->
+    <div class="panel panel--collections" data-category="collections">
+      <span class="panel__label">Collections</span>
+      <div class="panel__slides">
+        <div class="panel__slide" style="background-image: url('./assets/sapphire-ring.jpg')"></div>
+        <div class="panel__slide" style="background-image: url('./assets/silver-earrings.jpg')"></div>
+      </div>
+      <div class="panel__brand">
+        <span class="panel__brand-name">Lora Zhang</span>
+      </div>
+    </div>
+
+    <!-- Editorial Panel -->
+    <div class="panel panel--editorial" data-category="editorial">
+      <span class="panel__label">Editorial</span>
+      <div class="panel__slides">
+        <div class="panel__slide" style="background-image: url('./assets/pearl-necklace.jpg')"></div>
+        <div class="panel__slide" style="background-image: url('./assets/sapphire-ring.jpg')"></div>
+      </div>
+      <div class="panel__brand">
+        <span class="panel__brand-name">Lora Zhang</span>
+      </div>
+    </div>
+
+    <!-- Bespoke Panel -->
+    <div class="panel panel--bespoke" data-category="bespoke">
+      <span class="panel__label">Bespoke</span>
+      <div class="panel__slides">
+        <div class="panel__slide" style="background-image: url('./assets/sapphire-pendant.jpg')"></div>
+        <div class="panel__slide" style="background-image: url('./assets/silver-earrings.jpg')"></div>
+      </div>
+      <div class="panel__brand">
+        <span class="panel__brand-name">Lora Zhang</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Central brand name overlay -->
+  <div class="brand-overlay" id="brand-overlay">
+    <div class="brand-name" id="brand-name">
+      <span class="brand-name__line brand-name__line--top">
+        <span class="brand-char" style="--i:0">L</span><span class="brand-char" style="--i:1">O</span><span class="brand-char" style="--i:2">R</span><span class="brand-char" style="--i:3">A</span>
+      </span>
+      <span class="brand-name__line brand-name__line--bottom">
+        <span class="brand-char" style="--i:4">Z</span><span class="brand-char" style="--i:5">H</span><span class="brand-char" style="--i:6">A</span><span class="brand-char" style="--i:7">N</span><span class="brand-char" style="--i:8">G</span>
+      </span>
+    </div>
+    <span class="brand-tagline">Jewelry Designer</span>
+  </div>
+
+  <!-- About link on homepage -->
+  <button class="home-about-link" id="about-link">About</button>
+
+  <!-- ===== CATEGORY LIST VIEW ===== -->
+  <div class="category-view" id="category-view">
+    <div class="category-view__header">
+      <span class="category-view__title" id="cat-title"></span>
+      <button class="category-view__close" id="cat-close" onclick="closeCategoryView()" aria-label="Close category">&times;</button>
+    </div>
+    <div class="project-list" id="project-list"></div>
+    <div class="preview-image">
+      <img id="preview-img" src="" alt="Project preview">
+    </div>
+    <div class="collapsed-panels" id="collapsed-panels"></div>
+    <div class="scroll-arrow" id="scroll-arrow">↓</div>
+  </div>
+
+  <!-- ===== PROJECT PAGE ===== -->
+  <div class="project-page" id="project-page">
+    <div class="project-page__header">
+      <span class="project-page__category" id="proj-category"></span>
+      <div class="project-page__title-wrap">
+        <span class="project-page__title" id="proj-title"></span>
+        <span class="project-page__subtitle" id="proj-subtitle"></span>
+      </div>
+      <div class="project-page__close-wrap">
+        <button class="project-page__close" id="proj-close" onclick="closeProjectPage()" aria-label="Close project">&times;</button>
+      </div>
+    </div>
+    <div class="project-gallery" id="project-gallery"></div>
+  </div>
+
+  <!-- ===== ABOUT PAGE ===== -->
+  <div class="about-page" id="about-page">
+    <div class="about-page__header">
+      <span class="about-page__label">About</span>
+      <button class="about-page__close" onclick="closeAboutPage()" aria-label="Close about">&times;</button>
+    </div>
+    <div class="about-content">
+      <div class="about-content__image">
+        <img src="./assets/sapphire-pendant.jpg" alt="Lora Zhang — Atelier">
+      </div>
+      <div class="about-content__text">
+        <h1 class="about-content__name">Lora Zhang</h1>
+        <div class="about-content__bio">
+          <p>
+            Born in China and trained in the ateliers of Paris, Lora Zhang brings an East-meets-West sensibility to her jewelry design practice. Her work merges the fluid elegance of Chinese jade-carving traditions with the precision of European haute joaillerie.
+          </p>
+          <p>
+            Each collection begins as a dialogue between material and meaning — exploring the tension between organic forms and architectural geometry, between light captured and light released. Her pieces have been featured in Vogue China, Harper's Bazaar, and Wallpaper*, and are held in private collections across Asia and Europe.
+          </p>
+          <p>
+            Lora maintains her atelier in Shanghai, where she works with a small team of master artisans to realize both her seasonal collections and bespoke commissions for private clients and maisons.
+          </p>
+        </div>
+        <div class="about-content__contact">
+          <a href="mailto:studio@lorazhang.com" target="_blank" rel="noopener noreferrer">studio@lorazhang.com</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Attribution -->
+  <footer class="site-footer">
+    <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">
+      Created with Perplexity Computer
+    </a>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
